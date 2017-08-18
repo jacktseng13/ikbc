@@ -1,0 +1,2 @@
+class Ikbc < ApplicationRecord
+end

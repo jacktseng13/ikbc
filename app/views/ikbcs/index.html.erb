@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ikbcs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keybord</th>
+      <th>Mouse</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ikbcs.each do |ikbc| %>
+      <tr>
+        <td><%= ikbc.keybord %></td>
+        <td><%= ikbc.mouse %></td>
+        <td><%= link_to 'Show', ikbc %></td>
+        <td><%= link_to 'Edit', edit_ikbc_path(ikbc) %></td>
+        <td><%= link_to 'Destroy', ikbc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ikbc', new_ikbc_path %>
